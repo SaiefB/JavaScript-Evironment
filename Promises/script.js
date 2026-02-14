@@ -29,3 +29,14 @@ checkNumber(5)
     console.log("Error: " + error);
     console.log("Exercise 1b Completed");
   });
+
+
+//1c
+function wait(ms) {
+  // returns a Promise
+  return new Promise((resolve, reject) => {
+    
+}
+
+//test
+wait(2000).then(console.log)
