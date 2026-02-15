@@ -46,6 +46,20 @@ wait(2000).then(console.log);
 //Level 2
 
 // 3 - Chain Transformations
-function chain() {
-  return new Promise((resolve, reject) => {});
-}
+Promise.resolve(5)
+  .then(
+    (num) =>
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          num = num * 2;
+          resolve(num);
+          console.log("After first transformation: " + num);
+        }, 1);
+      }),
+  )
+  .then((num) => {
+    setTimeout(() => {
+      num = num + 3;
+      console.log("Final Result: " + num);
+    }, 1);
+  });
