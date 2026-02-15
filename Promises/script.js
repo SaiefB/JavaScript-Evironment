@@ -30,13 +30,15 @@ checkNumber(5)
     console.log("Exercise 1b Completed");
   });
 
-
 //1c
 function wait(ms) {
   // returns a Promise
   return new Promise((resolve, reject) => {
-    
+    setTimeout(() => {
+      resolve("Success: Waited for " + ms + " milliseconds");
+    });
+  });
 }
 
 //test
-wait(2000).then(console.log)
+wait(2000).then(console.log);
