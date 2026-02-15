@@ -63,3 +63,20 @@ Promise.resolve(5)
       console.log("Final Result: " + num);
     }, 1);
   });
+
+// 4 - Error Propagation
+Promise.resolve(10)
+  .then((num) => {
+    new Promise((resolve, reject) => {
+      if (num > 5) {
+        resolve(num);
+        console.log("Number is greater than 5: " + num);
+      } else if (num < 5) {
+        reject("Number is less than 5: " + num);
+      }
+    });
+  })
+  .then((num) => {
+    if (num > 15) {
+    }
+  });
