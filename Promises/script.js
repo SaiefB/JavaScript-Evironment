@@ -42,3 +42,10 @@ function wait(ms) {
 
 //test
 wait(2000).then(console.log);
+
+//Level 2
+
+// 3 - Chain Transformations
+function chain() {
+  return new Promise((resolve, reject) => {});
+}
