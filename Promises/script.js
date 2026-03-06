@@ -71,6 +71,7 @@ Promise.resolve(10)
       if (num > 5) {
         resolve(num);
         console.log("Number is greater than 5: " + num);
+        return num; // Ensure the promise chain continues with the resolved value
       } else if (num < 5) {
         reject("Number is less than 5: " + num);
       }
@@ -78,5 +79,12 @@ Promise.resolve(10)
   })
   .then((num) => {
     if (num > 15) {
+      resolve(num);
+      console.log("Number is greater that 15: " + num);
+    } else if (num < 15) {
+      reject("Number is less than 15: " + num);
     }
+  })
+  .catch((error) => {
+    console.log("Error caught: " + error);
   });
