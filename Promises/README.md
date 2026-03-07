@@ -122,3 +122,30 @@ function delay(ms) {
 // Test it:
 delay(100).then((val) => console.log(val));
 ```
+
+---
+
+### 6️⃣ Handle Promise Rejection
+
+#### Task:
+
+Create a function `safeDivide(a, b)` that returns a Promise:
+
+- Resolves with `a / b` if `b` is not `0`
+- Rejects with an Error: `"Cannot divide by zero"` if `b` is `0`
+
+#### Requirements:
+
+- Handle the rejection with `.catch()` in your test.
+
+#### Your Code:
+
+```javascript
+function safeDivide(a, b) {
+  // your code here
+}
+
+// Test both cases:
+safeDivide(10, 2).then((result) => console.log(result)); // 5
+safeDivide(10, 0).catch((err) => console.log(err.message)); // "Cannot divide by zero"
+```

@@ -103,3 +103,21 @@ function delay(ms) {
 
 // Test it:
 delay(100).then((val) => console.log(val));
+
+//Handle Promise Rejection
+function safeDivide(a, b) {
+  return new Promise((resolve, reject) => {
+    if (b === 0) {
+      reject(new Error("Cannot divide by zero"));
+    } else {
+      resolve(a / b);
+    }
+  }).catch((error) => {
+    console.error("Error: " + error.message);
+    throw error; // rethrow so the caller can still catch it
+  });
+}
+
+// Test both cases:
+safeDivide(10, 2).then((result) => console.log(result)); // 5
+safeDivide(10, 0).catch((err) => console.log(err.message)); // "Cannot divide by zero"
