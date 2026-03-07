@@ -88,3 +88,18 @@ Promise.resolve(10)
   .catch((error) => {
     console.log("Error caught: " + error);
   });
+
+// Claude
+
+// Create your first promise
+function delay(ms) {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("done");
+    }, ms);
+  });
+  return promise;
+}
+
+// Test it:
+delay(100).then((val) => console.log(val));

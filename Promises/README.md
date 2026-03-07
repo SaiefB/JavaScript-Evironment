@@ -97,3 +97,28 @@ Create a Promise chain where:
 
 > **Note:**  
 > This is where Promises stop being cute and start being useful.
+
+---
+
+### 5️⃣ Create Your First Promise
+
+#### Task:
+
+Create a function called `delay(ms)` that returns a Promise which resolves after `ms` milliseconds with the string `"done"`.
+
+#### Example:
+
+```javascript
+delay(100).then((val) => console.log(val)); // logs "done"
+```
+
+#### Your Code:
+
+```javascript
+function delay(ms) {
+  // your code here
+}
+
+// Test it:
+delay(100).then((val) => console.log(val));
+```
