@@ -166,3 +166,19 @@ const myPromise = new Promise((resolve, reject) => {
   // call resolve() here
 });
 ```
+
+### 8️⃣ Use .then() to read the value
+
+#### Task:
+
+Use `.then()` to log the resolved value to the console.
+
+#### Your Code:
+
+```javascript
+const myPromise = Promise.resolve("hello");
+
+myPromise.then((value) => console.log(value)); // logs "hello"
+```
+
+---

@@ -128,3 +128,10 @@ safeDivide(10, 0).catch((err) => console.log(err.message)); // "Cannot divide by
 const myPromise = new Promise((resolve, reject) => {
   resolve("hello");
 });
+
+// 8. Use .then to read the value
+
+const myPromise = Promise.resolve("hello");
+
+myPromise.then(())
+  // .then(...)
