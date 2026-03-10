@@ -149,3 +149,20 @@ function safeDivide(a, b) {
 safeDivide(10, 2).then((result) => console.log(result)); // 5
 safeDivide(10, 0).catch((err) => console.log(err.message)); // "Cannot divide by zero"
 ```
+
+---
+
+### 7️⃣ Resolve a Promise
+
+#### Task:
+
+Create a variable called `myPromise` that is a Promise which resolves with the string `"hello"`.
+
+#### Your Code:
+
+```javascript
+// A Promise that resolves with "hello"
+const myPromise = new Promise((resolve, reject) => {
+  // call resolve() here
+});
+```

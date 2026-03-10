@@ -121,3 +121,10 @@ function safeDivide(a, b) {
 // Test both cases:
 safeDivide(10, 2).then((result) => console.log(result)); // 5
 safeDivide(10, 0).catch((err) => console.log(err.message)); // "Cannot divide by zero"
+
+// 7. Resolve a Promise
+
+// A Promise that resolves with "hello"
+const myPromise = new Promise((resolve, reject) => {
+  resolve("hello");
+});
