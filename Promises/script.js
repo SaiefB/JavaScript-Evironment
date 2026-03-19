@@ -129,9 +129,8 @@ const myPromise = new Promise((resolve, reject) => {
   resolve("hello");
 });
 
-// 8. Use .then to read the value
+// 8. Use .then() to read the value
 
 const myPromise = Promise.resolve("hello");
 
-myPromise.then(())
-  // .then(...)
+myPromise.then((value) => console.log(value));
