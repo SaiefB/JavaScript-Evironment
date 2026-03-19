@@ -11,7 +11,9 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-# 1. Use .then() to read the value
+# 2. Use .then() to read the value
+
+myPromise resolves with "hello". Use .then() to log the value to the console
 
 ## Your Code
 
@@ -26,4 +28,24 @@ Hint:
 
 ```javascript
 .then(value => console.log(value))
+```
+
+# 3. Reject a Promise
+
+Create myPromise — a Promise that rejects with the message "oops". Use .catch() to log the error message.
+
+## Your Code
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  // call reject() here
+});
+
+myPromise.catch((err) => console.log(err));
+```
+
+Hint:
+
+```javascript
+ Call reject("oops"). In .catch(err => ...), err will be "oops".
 ```

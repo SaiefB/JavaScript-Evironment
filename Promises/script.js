@@ -134,3 +134,11 @@ const myPromise = new Promise((resolve, reject) => {
 const myPromise = Promise.resolve("hello");
 
 myPromise.then((value) => console.log(value));
+
+//3. Reject a Promise
+
+const myPromise = new Promise((resolve, reject) => {
+  reject("oops");
+});
+
+myPromise.catch((err) => console.log(err));
