@@ -161,3 +161,28 @@ Hint:
 ```javascript
 .then(str => str.length + 10) — returning a value passes it along to the next .then().
 ```
+
+# 2.3 - Catch an error from .then()
+
+If you throw inside a .then(), the .catch() at the end will catch it.
+
+Complete the chain below so that when the value is 0, it throws an error with the message "zero not allowed". The .catch() should log the error message.
+
+## Your Code
+
+```javascript
+Promise.resolve(0)
+  .then((val) => {
+    if (val === 0) {
+      // throw an error here
+    }
+    return val;
+  })
+  .catch((err) => console.log(err.message));
+```
+
+Hint:
+
+```javascript
+throw new Error("zero not allowed") inside the if block.
+```

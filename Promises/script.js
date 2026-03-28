@@ -172,3 +172,14 @@ myPromise.then((val) => console.log(val));
 Promise.resolve("hello")
   .then((str) => str.length + 10)
   .then((result) => console.log(result));
+
+// 2.3 - Catch an error from .then()
+Promise.resolve(0)
+  .then((val) => {
+    if (val === 0) {
+      // throw an error here
+      throw new Error("zero not allowed");
+    }
+    return val;
+  })
+  .catch((err) => console.log(err.message));
