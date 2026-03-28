@@ -98,3 +98,24 @@ Hint:
 ```javascript
  const result = await Promise.resolve("world"); then console.log(result);
 ```
+
+# 6. Promise.all - Wait for two
+
+Use Promise.all() to wait for both promises below, then log the result array.
+
+You should see ["cat", "dog"] logged.
+
+## Your Code
+
+```javascript
+const p1 = Promise.resolve("cat");
+const p2 = Promise.resolve("dog");
+
+// Promise.all([...]).then(...)
+```
+
+Hint:
+
+```javascript
+Promise.all([p1, p2]).then((values) => console.log(values));
+```
