@@ -205,3 +205,13 @@ async function run() {
 }
 
 run();
+
+// 2.6 - Promise.all with three values
+const p1 = Promise.resolve(10);
+const p2 = Promise.resolve(20);
+const p3 = Promise.resolve(30);
+
+Promise.all([p1, p2, p3]).then((values) => {
+  // add up all values and log the sum
+  console.log(values[0] + values[1] + values[2]);
+});
