@@ -200,7 +200,7 @@ async function run() {
   try {
     const result = await failingPromise;
   } catch (err) {
-    // log err.message
+    console.log(err.message);
   }
 }
 
