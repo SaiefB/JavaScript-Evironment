@@ -145,8 +145,15 @@ myPromise.catch((err) => console.log(err));
 
 // 4. Chain two .then() calls
 
-Promise.resolve(5);
-// .then( multiply by 2 )
- .then((num) => num * 2)
-// .then( log it )
-  .then((num) => console.log(num)); // 10
+Promise.resolve(5)
+  .then((n) => n * 2)
+  .then((result) => console.log(result)); // 10
+
+// 5. Async/ Await Basica
+
+async function run() {
+  const result = await Promise.resolve("world");
+  console.log(result);
+}
+
+run();

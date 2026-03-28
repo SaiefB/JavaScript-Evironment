@@ -73,25 +73,28 @@ Hint:
  .then(n => n * 2) returns the new value to the next .then().
 ```
 
-# 5.
+# 5. async / await basics
 
-Start with Promise.resolve(5). Chain two .then() calls:
+Write an async function called run that:
 
-1. Multiply the value by 2
-2. Log the result
+1. Awaits Promise.resolve("world") and stores the result
+2. Logs the result
 
-You should see 10 logged.
+Then call run().
 
 ## Your Code
 
 ```javascript
-Promise.resolve(5);
-// .then( multiply by 2 )
-// .then( log it )
+async function run() {
+  // const result = await ...
+  // console.log(result)
+}
+
+run();
 ```
 
 Hint:
 
 ```javascript
- .then(n => n * 2) returns the new value to the next .then().
+ const result = await Promise.resolve("world"); then console.log(result);
 ```
