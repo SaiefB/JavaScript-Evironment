@@ -49,3 +49,49 @@ Hint:
 ```javascript
  Call reject("oops"). In .catch(err => ...), err will be "oops".
 ```
+
+# 4. Chain two .then() calls
+
+Start with Promise.resolve(5). Chain two .then() calls:
+
+1. Multiply the value by 2
+2. Log the result
+
+You should see 10 logged.
+
+## Your Code
+
+```javascript
+Promise.resolve(5);
+// .then( multiply by 2 )
+// .then( log it )
+```
+
+Hint:
+
+```javascript
+ .then(n => n * 2) returns the new value to the next .then().
+```
+
+# 5.
+
+Start with Promise.resolve(5). Chain two .then() calls:
+
+1. Multiply the value by 2
+2. Log the result
+
+You should see 10 logged.
+
+## Your Code
+
+```javascript
+Promise.resolve(5);
+// .then( multiply by 2 )
+// .then( log it )
+```
+
+Hint:
+
+```javascript
+ .then(n => n * 2) returns the new value to the next .then().
+```

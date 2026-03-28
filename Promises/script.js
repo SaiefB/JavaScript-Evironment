@@ -142,3 +142,11 @@ const myPromise = new Promise((resolve, reject) => {
 });
 
 myPromise.catch((err) => console.log(err));
+
+// 4. Chain two .then() calls
+
+Promise.resolve(5);
+// .then( multiply by 2 )
+ .then((num) => num * 2)
+// .then( log it )
+  .then((num) => console.log(num)); // 10
