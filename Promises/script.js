@@ -157,3 +157,13 @@ async function run() {
 }
 
 run();
+
+// 6. Promise.all - Wait for two
+const p1 = Promise.resolve("cat");
+const p2 = Promise.resolve("dog");
+
+Promise.all([p1, p2]).then((values) => console.log(values)); // ["cat", "dog"]
+
+// 2.1 - Promise.resolve() shorthand
+const myPromise = Promise.resolve(42);
+myPromise.then((val) => console.log(val));

@@ -119,3 +119,23 @@ Hint:
 ```javascript
 Promise.all([p1, p2]).then((values) => console.log(values));
 ```
+
+# 2.1 - Promise.resolve() shorthand
+
+Instead of new Promise(resolve => resolve(42)), you can use the shorthand Promise.resolve(42).
+
+Create a variable myPromise using Promise.resolve() that resolves with the number 42, then log it with .then().
+
+## Your Code
+
+```javascript
+// Use Promise.resolve() shorthand
+const myPromise = // ...
+  myPromise.then((val) => console.log(val));
+```
+
+Hint:
+
+```javascript
+const myPromise = Promise.resolve(42);
+```
