@@ -183,3 +183,12 @@ Promise.resolve(0)
     return val;
   })
   .catch((err) => console.log(err.message));
+
+// 2.4 - Async function returns a promise
+
+async function getName() {
+  // return "Alice"
+  return "Alice";
+}
+
+getName().then((name) => console.log(name));

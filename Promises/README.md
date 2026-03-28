@@ -186,3 +186,25 @@ Hint:
 ```javascript
 throw new Error("zero not allowed") inside the if block.
 ```
+
+# 2.4 - Async function returns a Promise
+
+Any async function automatically returns a Promise.
+
+Write an async function called getName that returns "Alice". Then call it and use .then() to log the result.
+
+## Your Code
+
+```javascript
+async function getName() {
+  // return "Alice"
+}
+
+getName().then((name) => console.log(name));
+```
+
+Hint:
+
+```javascript
+Just return "Alice" inside the async function — it automatically wraps it in a Promise.
+```
