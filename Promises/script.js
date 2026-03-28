@@ -192,3 +192,16 @@ async function getName() {
 }
 
 getName().then((name) => console.log(name));
+
+// 2.5 - Await inside async - try/catch
+const failingPromise = Promise.reject(new Error("something went wrong"));
+
+async function run() {
+  try {
+    const result = await failingPromise;
+  } catch (err) {
+    // log err.message
+  }
+}
+
+run();

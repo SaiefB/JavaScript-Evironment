@@ -208,3 +208,55 @@ Hint:
 ```javascript
 Just return "Alice" inside the async function — it automatically wraps it in a Promise.
 ```
+
+# 2.5 - Await inside async - try/catch
+
+Use try/catch with await to handle a rejected Promise.
+
+The function failingPromise is already defined and rejects with "something went wrong". Write an async function called run that awaits it inside a try/catch and logs the error message in the catch block. Then call run().
+
+## Your Code
+
+```javascript
+const failingPromise = Promise.reject(new Error("something went wrong"));
+
+async function run() {
+  try {
+    const result = await failingPromise;
+  } catch (err) {
+    // log err.message
+  }
+}
+
+run();
+```
+
+Hint:
+
+```javascript
+Inside catch (err), write console.log(err.message).
+```
+
+# 2.6 - Promise.all with three values
+
+Use Promise.all() to wait for the three promises below, then log the sum of their values.
+
+The three promises resolve with 10, 20, and 30 — so you should log 60.
+
+## Your Code
+
+```javascript
+const p1 = Promise.resolve(10);
+const p2 = Promise.resolve(20);
+const p3 = Promise.resolve(30);
+
+Promise.all([p1, p2, p3]).then((values) => {
+  // add up all values and log the sum
+});
+```
+
+Hint:
+
+```javascript
+values is an array [10, 20, 30]. Use values[0] + values[1] + values[2] or values.reduce((a, b) => a + b, 0).
+```
