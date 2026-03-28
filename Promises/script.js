@@ -167,3 +167,8 @@ Promise.all([p1, p2]).then((values) => console.log(values)); // ["cat", "dog"]
 // 2.1 - Promise.resolve() shorthand
 const myPromise = Promise.resolve(42);
 myPromise.then((val) => console.log(val));
+
+// 2.2 - Return a value from .then()
+Promise.resolve("hello")
+  .then((str) => str.length + 10)
+  .then((result) => console.log(result));

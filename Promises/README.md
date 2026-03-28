@@ -139,3 +139,25 @@ Hint:
 ```javascript
 const myPromise = Promise.resolve(42);
 ```
+
+# 2.2 - Return a value from .then()
+
+When you return a value inside .then(), the next .then() receives it.
+
+Start with Promise.resolve("hello"), add 10 to its .length in the first .then(), then log the result in a second .then().
+
+You should see 15 logged ("hello" has 5 letters, plus 10).
+
+## Your Code
+
+```javascript
+Promise.resolve("hello")
+  .then(str => /* return str.length + 10 */)
+  .then(result => console.log(result));
+```
+
+Hint:
+
+```javascript
+.then(str => str.length + 10) — returning a value passes it along to the next .then().
+```
