@@ -215,3 +215,16 @@ Promise.all([p1, p2, p3]).then((values) => {
   // add up all values and log the sum
   console.log(values[0] + values[1] + values[2]);
 });
+
+// 3.1 - .then() runs after the promise resolves
+console.log("1 - before promise");
+
+Promise.resolve("Saief")
+  .then((val) => {
+    console.log("2 - inside then:", val);
+  })
+  .then(() => console.log("4 - done"));
+
+console.log("3 - after promise");
+
+// 3.2 - Wrapping a value in a Promise
