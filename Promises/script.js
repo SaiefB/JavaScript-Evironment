@@ -228,3 +228,11 @@ Promise.resolve("Saief")
 console.log("3 - after promise");
 
 // 3.2 - Wrapping a value in a Promise
+function toPromise(value) {
+  // return value as a resolved Promise
+  return Promise.resolve(value);
+}
+
+// Test it:
+toPromise("javascript").then((val) => console.log(val)); // "javascript"
+toPromise(100).then((val) => console.log(val)); // 100
