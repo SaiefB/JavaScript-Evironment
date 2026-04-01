@@ -236,3 +236,19 @@ function toPromise(value) {
 // Test it:
 toPromise("javascript").then((val) => console.log(val)); // "javascript"
 toPromise(100).then((val) => console.log(val)); // 100
+
+// 3.3 - finally()
+const success = Promise.resolve("data loaded");
+const failure = Promise.reject(new Error("network error"));
+
+success
+  .then((val) => console.log(val))
+  .catch((err) => console.log(err.message))
+  // add .finally() here
+  .finally(() => console.log("done loading"));
+
+failure
+  .then((val) => console.log(val))
+  .catch((err) => console.log(err.message))
+  // add .finally() here
+  .finally(() => console.log("done loading"));
