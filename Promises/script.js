@@ -268,3 +268,13 @@ async function run() {
 }
 
 run();
+
+// 3.5 - Promise.all fails fast
+const p1 = Promise.resolve("ok");
+const p2 = Promise.reject(new Error("oops"));
+const p3 = Promise.resolve("also ok");
+
+Promise.all([p1, p2, p3])
+  .then((values) => console.log(values))
+  .catch((err) => console.log("caught: " + err.message));
+// add .catch() to log "caught: " + err.message
