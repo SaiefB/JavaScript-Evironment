@@ -252,3 +252,19 @@ failure
   .catch((err) => console.log(err.message))
   // add .finally() here
   .finally(() => console.log("done loading"));
+
+// 3.4 - async/await with a real delay
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function run() {
+  // log "start"
+  // await the delay
+  // log "end"
+  console.log("start");
+  await delay(200);
+  console.log("end");
+}
+
+run();
