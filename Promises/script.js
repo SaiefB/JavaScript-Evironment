@@ -278,3 +278,11 @@ Promise.all([p1, p2, p3])
   .then((values) => console.log(values))
   .catch((err) => console.log("caught: " + err.message));
 // add .catch() to log "caught: " + err.message
+
+// 3.6 - Build a simple async function
+async function double(number) {
+  const result = await Promise.resolve(number * 2);
+  return result;
+}
+
+double(7).then((result) => console.log(result)); // 14
